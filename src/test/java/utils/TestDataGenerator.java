@@ -30,23 +30,13 @@ public class TestDataGenerator {
         String randomField = fields[random.nextInt(fields.length)];
 
         switch (randomField) {
-            case "name" -> {
-                book.setName("");
-                logger.info("Field 'name' set to empty");
-            }
-            case "author" -> {
-                book.setAuthor("");
-                logger.info("Field 'author' set to empty");
-            }
-            case "publication" -> {
-                book.setPublication("");
-                logger.info("Field 'publication' set to empty");
-            }
-            case "category" -> {
-                book.setCategory("");
-                logger.info("Field 'category' set to empty");
-            }
+            case "name" -> book.setName("");
+            case "author" -> book.setAuthor("");
+            case "publication" -> book.setPublication("");
+            case "category" -> book.setCategory("");
         }
+
+        logger.info("Field '{}' set to empty", randomField);
         return book;
     }
 
